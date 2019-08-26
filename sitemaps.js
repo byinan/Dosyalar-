@@ -182,11 +182,11 @@ function displayToc(filter) {
 // this function creates a three-column table and adds it to the screen
    var numDisplayed = 0;
    var tocTable = '';
-   var tocHead1 = 'Yazinin Basligi';
-   var tocTool1 = 'Başliga gore sıralamak için tiklayin';
-   var tocHead2 = 'Yazinin Tarihi';
-   var tocTool2 = 'Tarihe göre siralamak için tiklayin';
-   var tocHead3 = 'Kategoriler';
+   var tocHead1 = 'POST TITLE';
+   var tocTool1 = 'Click to sort by title';
+   var tocHead2 = 'POST DATE';
+   var tocTool2 = 'Click to sort by date';
+   var tocHead3 = 'LABELS';
    var tocTool3 = '';
    if (sortBy == "titleasc") { 
       tocTool1 += ' (descending)';
@@ -205,7 +205,7 @@ function displayToc(filter) {
       tocTool2 += ' (oldest first)';
    }
    if (postFilter != '') {
-      tocTool3 = 'Tüm gönderileri göstermek için tiklayin';
+      tocTool3 = 'Click to show all posts';
    }
    tocTable += '<table>';
    tocTable += '<tr>';
@@ -233,7 +233,7 @@ function displayToc(filter) {
    }
    tocTable += '</table>';
    if (numDisplayed == postTitle.length) {
-      var tocNote = '<span class="toc-note">Tüm Yazılar ' + postTitle.length + ' Tane<br/></span>'; }
+      var tocNote = '<span class="toc-note">Displaying all ' + postTitle.length + ' posts<br/></span>'; }
    else {
       var tocNote = '<span class="toc-note">Displaying ' + numDisplayed + ' posts labeled \'';
       tocNote += postFilter + '\' of '+ postTitle.length + ' posts total<br/></span>';
@@ -262,12 +262,12 @@ function showToc() {
      var toclink = document.getElementById("toclink");
    
   }
-  else { alert("Lutfen Bekleyin... Yukleniyor"); }
+  else { alert("Just wait... TOC is loading"); }
 }
 
 function hideToc() {
   var tocdiv = document.getElementById("toc");
   tocdiv.innerHTML = '';
   var toclink = document.getElementById("toclink");
-  toclink.innerHTML = '<a href="#" onclick="scroll(0,0); showToc(); Effect.toggle('+"'toc-result','blind');"+'">» İçindekiler'i Goster</a> <img src="http://chenkaie.blog.googlepages.com/new_1.gif"/>';
+  toclink.innerHTML = '<a href="#" onclick="scroll(0,0); showToc(); Effect.toggle('+"'toc-result','blind');"+'">» Show Table of Contents</a> <img src="http://chenkaie.blog.googlepages.com/new_1.gif"/>';
 }
