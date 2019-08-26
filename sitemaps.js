@@ -182,10 +182,10 @@ function displayToc(filter) {
 // this function creates a three-column table and adds it to the screen
    var numDisplayed = 0;
    var tocTable = '';
-   var tocHead1 = 'Yazının Başlığı';
-   var tocTool1 = 'Başlığa göre sıralamak için tıklayın';
-   var tocHead2 = 'Yazının Tarihi';
-   var tocTool2 = 'Tarihe göre sıralamak için tıklayın';
+   var tocHead1 = 'Yazinin Basligi';
+   var tocTool1 = 'Başliga gore sıralamak için tiklayin';
+   var tocHead2 = 'Yazinin Tarihi';
+   var tocTool2 = 'Tarihe göre siralamak için tiklayin';
    var tocHead3 = 'Kategoriler';
    var tocTool3 = '';
    if (sortBy == "titleasc") { 
@@ -205,7 +205,7 @@ function displayToc(filter) {
       tocTool2 += ' (oldest first)';
    }
    if (postFilter != '') {
-      tocTool3 = 'Tüm gönderileri göstermek için tıklayın';
+      tocTool3 = 'Tüm gönderileri göstermek için tiklayin';
    }
    tocTable += '<table>';
    tocTable += '<tr>';
@@ -262,12 +262,12 @@ function showToc() {
      var toclink = document.getElementById("toclink");
    
   }
-  else { alert("Lütfen Bekleyin... Yükleniyor"); }
+  else { alert("Lutfen Bekleyin... Yukleniyor"); }
 }
 
 function hideToc() {
   var tocdiv = document.getElementById("toc");
   tocdiv.innerHTML = '';
   var toclink = document.getElementById("toclink");
-  toclink.innerHTML = '<a href="#" onclick="scroll(0,0); showToc(); Effect.toggle('+"'toc-result','blind');"+'">» İçindekiler'i Göster</a> <img src="http://chenkaie.blog.googlepages.com/new_1.gif"/>';
+  toclink.innerHTML = '<a href="#" onclick="scroll(0,0); showToc(); Effect.toggle('+"'toc-result','blind');"+'">» İçindekiler'i Goster</a> <img src="http://chenkaie.blog.googlepages.com/new_1.gif"/>';
 }
